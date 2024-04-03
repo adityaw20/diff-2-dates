@@ -92,6 +92,7 @@
     </div>
 
     <script>
+        
          function calculate() {
             const firstDate = document.getElementById('firstDate').value;
             const secondDate = document.getElementById('secondDate').value;
@@ -106,6 +107,13 @@
             const dayElement = document.getElementById('dayCount');
             dayElement.innerText = ` The Difference between the dates is ${days}  ${days > 1 ? 'days' :  'day'}.`;
 
+        }
+
+        function reset()
+        {
+            document.getElementById('firstDate').value  ="";
+            document.getElementById('secondDate').value ="";
+            document.getElementById('dayCount').innerText = "";
         }
     </script>
 
