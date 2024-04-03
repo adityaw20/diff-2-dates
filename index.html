@@ -18,6 +18,7 @@
             text-align: center;
             color: #fff;
             margin-top: 20px;
+            font-size: 50px;
         }
 
         .input-container {
@@ -89,6 +90,24 @@
             <button type="button" class="btn" onclick="reset()">Reset</button>
         </div>
     </div>
+
+    <script>
+         function calculate() {
+            const firstDate = document.getElementById('firstDate').value;
+            const secondDate = document.getElementById('secondDate').value;
+
+            const date1 = new Date(firstDate);
+            const date2 = new Date(secondDate);
+
+            const difference = Math.abs(date2 - date1);
+
+            const days = Math.round(difference / (1000 * 60 * 60 * 24));
+
+            const dayElement = document.getElementById('dayCount');
+            dayElement.innerText = ` The Difference between the dates is ${days}  ${days > 1 ? 'days' :  'day'}.`;
+
+        }
+    </script>
 
 </body>
 
